@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexTubeBot Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0f172a; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); }
+    </style>
+</head>
+<body class="text-white min-h-screen p-8">
+    <div class="max-w-4xl mx-auto">
+        <header class="flex justify-between items-center mb-12">
+            <div>
+                <h1 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">NexTubeBot Dashboard</h1>
+                <p class="text-slate-400 mt-2">Kelola bot Discord Anda dengan mudah dan elegan.</p>
+            </div>
+            <div class="bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-bold flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> BOT ONLINE
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="glass p-6 rounded-3xl">
+                <h3 class="text-xl font-bold mb-4 flex items-center gap-2"><i data-lucide="settings" class="text-indigo-400"></i> Konfigurasi Bot</h3>
+                <div class="space-y-4">
+                    <input class="w-full bg-black/30 p-3 rounded-xl border border-white/10" placeholder="Prefix Bot (!)">
+                    <input class="w-full bg-black/30 p-3 rounded-xl border border-white/10" placeholder="Token Discord">
+                    <button class="w-full bg-indigo-600 py-3 rounded-xl font-bold hover:bg-indigo-700 transition-all">Simpan Perubahan</button>
+                </div>
+            </div>
+
+            <div class="glass p-6 rounded-3xl">
+                <h3 class="text-xl font-bold mb-4 flex items-center gap-2"><i data-lucide="terminal" class="text-cyan-400"></i> Command Aktif</h3>
+                <ul class="space-y-3 text-sm text-slate-300">
+                    <li class="flex justify-between bg-white/5 p-3 rounded-lg"><span>!ping</span> <span class="text-cyan-400">Aktif</span></li>
+                    <li class="flex justify-between bg-white/5 p-3 rounded-lg"><span>!web</span> <span class="text-cyan-400">Aktif</span></li>
+                    <li class="flex justify-between bg-white/5 p-3 rounded-lg"><span>!help</span> <span class="text-cyan-400">Aktif</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
